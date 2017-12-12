@@ -1,0 +1,41 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "plugin:flowtype/recommended"],
+  "env": {
+    "browser": true,
+    "mocha": true
+  },
+  "globals": {
+    "browser": true,
+    "dataLayer": true
+  },
+  "plugins": [
+    "react",
+    "import",
+    "chai-friendly",
+    "mocha",
+    "flowtype"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["test/**/*.js", "deploy/**/*.js", "*.js"]}],
+    "react/jsx-filename-extension": "off",
+    "no-unused-expressions": "off",
+    "chai-friendly/no-unused-expressions": "error",
+    "semi": ["warn", "never"],
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": "off",
+    "react/sort-comp": ["error", {"order": ["type-annotations", "lifecycle", "static-methods", "everything-else", "render"]}],
+    "mocha/no-exclusive-tests": "error",
+    "no-console": "error",
+    "import/no-named-as-default": "off",
+    "comma-dangle": ["error", "never"],
+    "no-underscore-dangle": "off",
+    "max-len": ["warn", 200],
+    "no-use-before-define": "off",
+    "no-plusplus": "off",
+    "complexity": ["error", { "max": 4 }]
+  },
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}
