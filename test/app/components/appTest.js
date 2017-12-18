@@ -9,4 +9,10 @@ describe('App', () => {
 
     expect(appComponent.find('h1').text()).to.equal('Hello!!')
   })
+  
+  it('renders True', () => {
+    const appComponent = shallow(<App message="Hello!!" />)
+
+    expect(appComponent.find('p').text()).to.equal('True')
+  })
 })
