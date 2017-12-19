@@ -6,3 +6,4 @@ build
 coverage/
 .stryker-tmp
 reports/*
+package-lock.json
