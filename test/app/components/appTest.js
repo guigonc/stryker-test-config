@@ -4,15 +4,19 @@ import React from 'react'
 import App from 'app/components/app'
 
 describe('App', () => {
-  it('renders hello', () => {
-    const appComponent = shallow(<App message="Hello!!" />)
+  let appComponent
 
+  beforeEach(() => {
+    const data = { name: 'Victor', role: 'Developer' }
+
+    appComponent = shallow(<App message="Hello!!" data={data} />)
+  })
+
+  it('renders hello', () => {
     expect(appComponent.find('h1').text()).to.equal('Hello!!')
   })
-  
-  it('renders True', () => {
-    const appComponent = shallow(<App message="Hello!!" />)
 
+  it('renders True', () => {
     expect(appComponent.find('p').text()).to.equal('True')
   })
 })
