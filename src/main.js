@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { render } from 'react-dom'
-import App from 'app/components/app'
+import App from './app/components/app'
 
 const person = { name: 'Victor' }
 const job = { role: 'Developer' }
